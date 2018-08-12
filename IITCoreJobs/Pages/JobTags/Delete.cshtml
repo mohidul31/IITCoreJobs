@@ -1,0 +1,28 @@
+﻿@page
+@model IITCoreJobs.Pages.JobTags.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>JobTag</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JobTag.TagName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JobTag.TagName)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="JobTag.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
