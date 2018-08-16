@@ -20,6 +20,61 @@ namespace IITCoreJobs.Migrations
                 .HasAnnotation("ProductVersion", "2.0.3-rtm-10026")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("IITCoreJobs.Models.EmploymentStatus", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("TypeName")
+                        .IsRequired();
+
+                    b.HasKey("ID");
+
+                    b.ToTable("EmploymentStatus");
+                });
+
+            modelBuilder.Entity("IITCoreJobs.Models.Job", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<double>("AgeLimit");
+
+                    b.Property<Guid?>("CategoryID");
+
+                    b.Property<string>("EducationDetails");
+
+                    b.Property<Guid?>("EmploymentStatusID");
+
+                    b.Property<string>("JobDescription")
+                        .IsRequired();
+
+                    b.Property<string>("JobExperience")
+                        .IsRequired();
+
+                    b.Property<string>("JobTitle")
+                        .IsRequired();
+
+                    b.Property<DateTime?>("LastDate");
+
+                    b.Property<double>("Salary");
+
+                    b.Property<DateTime?>("SubmitDate")
+                        .HasColumnType("Date");
+
+                    b.Property<Guid?>("TagID");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.HasIndex("EmploymentStatusID");
+
+                    b.HasIndex("TagID");
+
+                    b.ToTable("Job");
+                });
+
             modelBuilder.Entity("IITCoreJobs.Models.JobCategory", b =>
                 {
                     b.Property<Guid>("ID")
@@ -44,6 +99,21 @@ namespace IITCoreJobs.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("JobTag");
+                });
+
+            modelBuilder.Entity("IITCoreJobs.Models.Job", b =>
+                {
+                    b.HasOne("IITCoreJobs.Models.JobCategory", "JobCategory")
+                        .WithMany()
+                        .HasForeignKey("CategoryID");
+
+                    b.HasOne("IITCoreJobs.Models.EmploymentStatus", "EmploymentStatus")
+                        .WithMany()
+                        .HasForeignKey("EmploymentStatusID");
+
+                    b.HasOne("IITCoreJobs.Models.JobTag", "JobTag")
+                        .WithMany()
+                        .HasForeignKey("TagID");
                 });
 #pragma warning restore 612, 618
         }

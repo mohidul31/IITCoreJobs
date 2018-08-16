@@ -18,13 +18,15 @@ namespace IITCoreJobs.Models
         }
 
         public DbSet<JobCategory> JobCategory { get; set; }
+        public DbSet<JobTag> JobTag { get; set; }
+        public DbSet<EmploymentStatus> EmploymentStatus { get; set; }
+        public DbSet<Job> Job { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS;Initial Catalog=IITJobsDB;Integrated Security=True");
             base.OnConfiguring(optionsBuilder);
         }
-
-        public DbSet<IITCoreJobs.Models.JobTag> JobTag { get; set; }
+        
     }
 }
