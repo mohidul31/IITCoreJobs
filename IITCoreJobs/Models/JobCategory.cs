@@ -11,5 +11,7 @@ namespace IITCoreJobs.Models
         [Required]
         [Display(Name = "Category Name")]
         public string CategoryName { get; set; }
+
+        public virtual IEnumerable<Job> JobList { get; set; }
     }
 }
