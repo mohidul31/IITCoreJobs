@@ -1,0 +1,96 @@
+﻿@model IEnumerable<BDJobsCore.Models.Job>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@{ 
+    int sl = 1;
+}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>SL</th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JobTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JobDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JobResponsibility)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EducationDetails)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Salary)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AgeLimit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LastDate)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmploymentStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobTag)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @(sl++)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobResponsibility)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EducationDetails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgeLimit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmploymentStatus.TypeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobCategory.CategoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobTag.TagName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,11 @@
+C:\Users\Lenovo\source\repos\BDJobsCore\BDJobsCore\bin\Debug\netcoreapp2.0\BDJobsCore.deps.json
+C:\Users\Lenovo\source\repos\BDJobsCore\BDJobsCore\bin\Debug\netcoreapp2.0\BDJobsCore.runtimeconfig.json
+C:\Users\Lenovo\source\repos\BDJobsCore\BDJobsCore\bin\Debug\netcoreapp2.0\BDJobsCore.runtimeconfig.dev.json
+C:\Users\Lenovo\source\repos\BDJobsCore\BDJobsCore\bin\Debug\netcoreapp2.0\BDJobsCore.dll
+C:\Users\Lenovo\source\repos\BDJobsCore\BDJobsCore\bin\Debug\netcoreapp2.0\BDJobsCore.pdb
+C:\Users\Lenovo\source\repos\BDJobsCore\BDJobsCore\obj\Debug\netcoreapp2.0\BDJobsCore.csprojAssemblyReference.cache
+C:\Users\Lenovo\source\repos\BDJobsCore\BDJobsCore\obj\Debug\netcoreapp2.0\BDJobsCore.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\BDJobsCore\BDJobsCore\obj\Debug\netcoreapp2.0\BDJobsCore.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\repos\BDJobsCore\BDJobsCore\obj\Debug\netcoreapp2.0\BDJobsCore.AssemblyInfo.cs
+C:\Users\Lenovo\source\repos\BDJobsCore\BDJobsCore\obj\Debug\netcoreapp2.0\BDJobsCore.dll
+C:\Users\Lenovo\source\repos\BDJobsCore\BDJobsCore\obj\Debug\netcoreapp2.0\BDJobsCore.pdb

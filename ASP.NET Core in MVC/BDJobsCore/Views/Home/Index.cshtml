@@ -1,0 +1,56 @@
+﻿@model BDJobsCore.Models.HomeViewModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row" style="padding-top:50px;">
+
+    <div class="col-md-8">
+        @foreach (var item in Model.JobsList)
+        {
+            <div class="row well">
+
+                <div class="col-md-8">
+                    <h3>@item.JobTitle</h3>
+                    <p><b>Details:</b> @item.JobDescription</p>
+                    <p><b>Responsibility:</b> @item.JobResponsibility</p>
+                    <p><b>Educations:</b> @item.EducationDetails</p>
+                    <p><b>Job Type:</b> @item.EmploymentStatus.TypeName</p>
+                </div>
+                <div class="col-md-4">
+                    <p><b>Salary :</b> @((item.Salary != 0 ? item.Salary.ToString() : "Negotiable"))</p>
+                    <p><b>Age Limit:</b> @item.AgeLimit</p>
+                    <p><b>Job Category:</b> @item.JobCategory.CategoryName</p>
+                    <p><b>Job Tag:</b> @item.JobTag.TagName</p>
+                    <p>
+                        <b>Application Deadline :</b>
+                        @if (@item.LastDate > DateTime.Now)
+                        {
+                            @item.LastDate
+                        }
+                        else
+                        {
+
+                            <b style="color:red">Expired</b>
+                        }
+                    </p>
+                    <p><b>Post Date :</b> @item.SubmitDate.Value.ToShortDateString()</p>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-md-3 well col-md-offset-1">
+        <ul>
+            @foreach (var item in Model.JobCategoryList)
+            {
+            <a href="/Home/Index?category=@item.ID" target="_blank">
+                <li>@item.CategoryName <span class="badge">@((item.JobList != null ? item.JobList.Count() : 0))</span></li>
+
+            </a>
+                
+            }
+        </ul>
+        </div>
+
+</div>
