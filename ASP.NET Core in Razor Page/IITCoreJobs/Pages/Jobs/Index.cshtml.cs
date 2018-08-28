@@ -25,7 +25,7 @@ namespace IITCoreJobs.Pages.Jobs
             Job = await _context.Job
                 .Include(j => j.EmploymentStatus)
                 .Include(j => j.JobCategory)
-                .Include(j => j.JobTag).ToListAsync();
+                .Include(j => j.JobTag).OrderByDescending(x => x.SubmitDate).ToListAsync();
         }
     }
 }

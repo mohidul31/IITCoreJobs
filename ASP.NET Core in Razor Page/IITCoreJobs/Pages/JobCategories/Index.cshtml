@@ -5,32 +5,34 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
-
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
+<div class="text-right" style="padding-bottom:10px;">
+    <a class="btn btn-success" href="/Create"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp; Create New</a>
+</div>
+<table class="table table-bordered table-striped">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.JobCategory[0].CategoryName)
-                </th>
+            <th>SL</th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobCategory[0].CategoryName)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.JobCategory) {
+        @{ int sl = 0; }
+        @foreach (var item in Model.JobCategory)
+        {
         <tr>
+            <td>@(++sl)</td>
             <td>
                 @Html.DisplayFor(modelItem => item.CategoryName)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.ID"><i class="fa fa-edit btn btn-warning btn-xs" aria-hidden="true"></i></a> |
+                <a asp-page="./Details" asp-route-id="@item.ID"><i class="fa fa-eye btn btn-primary btn-xs" aria-hidden="true"></i></a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID"><i class="fa fa-remove btn btn-danger btn-xs" aria-hidden="true"></i></a>
             </td>
         </tr>
-}
+        }
     </tbody>
 </table>

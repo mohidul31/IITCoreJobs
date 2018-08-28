@@ -5,35 +5,34 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
-
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
+<div class="text-right" style="padding-bottom:10px;">
+    <a class="btn btn-success" href="/Create"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp; Create New</a>
+</div>
+<table class="table table-bordered table-striped">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Job[0].JobTitle)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Job[0].JobDescription)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Job[0].JobExperience)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Job[0].EducationDetails)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Job[0].Salary)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Job[0].AgeLimit)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Job[0].LastDate)
-                </th>
+            <th>SL</th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job[0].JobTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job[0].JobDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job[0].JobExperience)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job[0].EducationDetails)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job[0].Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job[0].AgeLimit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job[0].LastDate)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Job[0].EmploymentStatus)
             </th>
@@ -47,8 +46,11 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Job) {
+        @{ int sl = 0; }
+        @foreach (var item in Model.Job)
+        {
         <tr>
+            <td>@(++sl)</td>
             <td>
                 @Html.DisplayFor(modelItem => item.JobTitle)
             </td>
@@ -80,11 +82,11 @@
                 @Html.DisplayFor(modelItem => item.JobTag.TagName)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.ID"><i class="fa fa-edit btn btn-warning btn-xs" aria-hidden="true"></i></a> |
+                <a asp-page="./Details" asp-route-id="@item.ID"><i class="fa fa-eye btn btn-primary btn-xs" aria-hidden="true"></i></a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID"><i class="fa fa-remove btn btn-danger btn-xs" aria-hidden="true"></i></a>
             </td>
         </tr>
-}
+        }
     </tbody>
 </table>

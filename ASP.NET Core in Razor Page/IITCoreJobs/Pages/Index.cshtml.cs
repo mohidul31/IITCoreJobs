@@ -41,9 +41,9 @@ namespace IITCoreJobs.Pages
             {
                 jobData = jobData.Where(x => x.JobTag.ID == tag.Value);
             }
-            JobList =  jobData.ToList();
+            JobList =  jobData.OrderByDescending(x => x.SubmitDate).ToList();
             
-            JobCategoryList =  _context2.JobCategory.ToList();
+            JobCategoryList =  _context2.JobCategory.OrderBy(x => x.CategoryName).ToList();
         }
     }
 }

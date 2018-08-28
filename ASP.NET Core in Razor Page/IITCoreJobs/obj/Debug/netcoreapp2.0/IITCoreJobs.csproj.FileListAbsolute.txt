@@ -9,3 +9,14 @@ C:\Users\Lenovo\source\repos\IITCoreJobs\IITCoreJobs\obj\Debug\netcoreapp2.0\IIT
 C:\Users\Lenovo\source\repos\IITCoreJobs\IITCoreJobs\obj\Debug\netcoreapp2.0\IITCoreJobs.AssemblyInfo.cs
 C:\Users\Lenovo\source\repos\IITCoreJobs\IITCoreJobs\obj\Debug\netcoreapp2.0\IITCoreJobs.dll
 C:\Users\Lenovo\source\repos\IITCoreJobs\IITCoreJobs\obj\Debug\netcoreapp2.0\IITCoreJobs.pdb
+C:\Users\Lenovo\source\repos\IITCoreJobs\ASP.NET Core in Razor Page\IITCoreJobs\bin\Debug\netcoreapp2.0\IITCoreJobs.deps.json
+C:\Users\Lenovo\source\repos\IITCoreJobs\ASP.NET Core in Razor Page\IITCoreJobs\bin\Debug\netcoreapp2.0\IITCoreJobs.runtimeconfig.json
+C:\Users\Lenovo\source\repos\IITCoreJobs\ASP.NET Core in Razor Page\IITCoreJobs\bin\Debug\netcoreapp2.0\IITCoreJobs.runtimeconfig.dev.json
+C:\Users\Lenovo\source\repos\IITCoreJobs\ASP.NET Core in Razor Page\IITCoreJobs\bin\Debug\netcoreapp2.0\IITCoreJobs.dll
+C:\Users\Lenovo\source\repos\IITCoreJobs\ASP.NET Core in Razor Page\IITCoreJobs\bin\Debug\netcoreapp2.0\IITCoreJobs.pdb
+C:\Users\Lenovo\source\repos\IITCoreJobs\ASP.NET Core in Razor Page\IITCoreJobs\obj\Debug\netcoreapp2.0\IITCoreJobs.csprojAssemblyReference.cache
+C:\Users\Lenovo\source\repos\IITCoreJobs\ASP.NET Core in Razor Page\IITCoreJobs\obj\Debug\netcoreapp2.0\IITCoreJobs.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\IITCoreJobs\ASP.NET Core in Razor Page\IITCoreJobs\obj\Debug\netcoreapp2.0\IITCoreJobs.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\repos\IITCoreJobs\ASP.NET Core in Razor Page\IITCoreJobs\obj\Debug\netcoreapp2.0\IITCoreJobs.AssemblyInfo.cs
+C:\Users\Lenovo\source\repos\IITCoreJobs\ASP.NET Core in Razor Page\IITCoreJobs\obj\Debug\netcoreapp2.0\IITCoreJobs.dll
+C:\Users\Lenovo\source\repos\IITCoreJobs\ASP.NET Core in Razor Page\IITCoreJobs\obj\Debug\netcoreapp2.0\IITCoreJobs.pdb

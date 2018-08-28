@@ -13256,11 +13256,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\source\\repos\\IITCoreJobs\\IITCoreJobs\\IITCoreJobs.csproj",
+      "projectUniqueName": "C:\\Users\\Lenovo\\source\\repos\\IITCoreJobs\\ASP.NET Core in Razor Page\\IITCoreJobs\\IITCoreJobs.csproj",
       "projectName": "IITCoreJobs",
-      "projectPath": "C:\\Users\\Lenovo\\source\\repos\\IITCoreJobs\\IITCoreJobs\\IITCoreJobs.csproj",
+      "projectPath": "C:\\Users\\Lenovo\\source\\repos\\IITCoreJobs\\ASP.NET Core in Razor Page\\IITCoreJobs\\IITCoreJobs.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\source\\repos\\IITCoreJobs\\IITCoreJobs\\obj\\",
+      "outputPath": "C:\\Users\\Lenovo\\source\\repos\\IITCoreJobs\\ASP.NET Core in Razor Page\\IITCoreJobs\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
