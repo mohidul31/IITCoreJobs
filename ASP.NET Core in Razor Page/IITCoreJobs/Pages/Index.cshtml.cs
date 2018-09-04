@@ -25,6 +25,8 @@ namespace IITCoreJobs.Pages
 
         public  void OnGet(Guid ? category, Guid? jobtype ,Guid? tag)
         {
+            JobCategoryList = _context2.JobCategory.OrderBy(x => x.CategoryName).ToList();
+
             IQueryable<Job> jobData = _context.Job.Include(j => j.EmploymentStatus).
                 Include(j => j.JobCategory).Include(j => j.JobTag).OrderBy(x => x.SubmitDate);
 
@@ -41,9 +43,9 @@ namespace IITCoreJobs.Pages
             {
                 jobData = jobData.Where(x => x.JobTag.ID == tag.Value);
             }
-            JobList =  jobData.OrderByDescending(x => x.SubmitDate).ToList();
+            JobList =  jobData.OrderByDescending(x => x.LastDate).ToList();
             
-            JobCategoryList =  _context2.JobCategory.OrderBy(x => x.CategoryName).ToList();
+            
         }
     }
 }
